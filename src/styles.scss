@@ -1,0 +1,51 @@
+// imports
+@import './styles/mosaik.presentation';
+@import './styles/mosaik.presentation.common';
+@import './styles/mosaik.presentation.default';
+
+@include dark-scheme-style(#0082BB, #18A957, #F0A323, #DF1642);
+@include yellow-accent-style();
+
+@include _font-style('https://fonts.googleapis.com/css?family=Open+Sans:400,500,700,900&display=swap', "'Open Sans'", "sans-serif");
+@include _font-style('https://fonts.googleapis.com/icon?family=Material+Icons', "'Material Icons'", '', 'material-icons');
+
+@include _elevation-style;
+
+@include flex-layout;
+@include margin-utils;
+@include overflow-utils;
+@include reset-utils;
+
+@include core-style('', false);
+@include body-style('', true);
+@include html-style('', true);
+@include table-style('default', false);
+@include input-style('default', false);
+@include label-style('default', false);
+@include heading2-style('default', false);
+@include checkbox-style('default', false);
+@include button-style('default', false);
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn {
+  border: 2px solid gray;
+  color: gray;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}

@@ -1,0 +1,9 @@
+<div class="flex no-over">
+	
+  <div class="upload-btn-wrapper m-16 flex">
+    <button class="default-btn primary outlined block">Upload a file</button>
+    <input type="file" (change)="upload($event.target.files, resultPanel)">
+  </div>
+
+  <app-data-table-view #dataTableView></app-data-table-view>
+</div>
